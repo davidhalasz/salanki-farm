@@ -34,7 +34,7 @@
                         </div>
                         <div class="hidden md:flex items-center justify-center w-full h-full">
                             <div class="w-full dynamic-height">
-                                <img src="{{url('/images/bolygo2.png')}}" alt="Image"/>
+                                <img src="{{url('/images/bolygo3.png')}}" alt="Image"/>
                             </div>
                         </div>
                     </div>

@@ -6,6 +6,7 @@ use App\Models\Gallery;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Collection;
 
 use Livewire\Component;
 
@@ -14,6 +15,7 @@ class GalleryForm extends Component
     use WithFileUploads;
 
     public $files = [];
+    public $prevFiles = [];
     protected $listeners = ['refreshGallery' => 'mount'];
 
 
@@ -25,11 +27,15 @@ class GalleryForm extends Component
 
     public function updatedFiles()
     {
-        
+        $uniqueFiles = [];
+        $isDuplicate = false;
+        $this->prevFiles = array_merge($this->files, $this->prevFiles);
+        $this->files = $this->prevFiles;
     }
 
     public function deleteFile($index) {
         unset($this->files[$index]);
+        $this->prevFiles = $this->files;
     }
 
     public function deleteGallery($id) {

@@ -1,6 +1,6 @@
 <x-guest-layout>
     <div class="container mx-auto py-10">
-        <h2 class="text-center text-2xl mb-4">A Farm lakói</h2>
+        <h2 class="text-center text-3xl mb-6">A Farm lakói</h2>
         <div class="grid grid-cols-4 gap-4">
             <div class="border border-1 border-black dynamic-height"></div>
             <div class="border border-1 border-black dynamic-height"></div>

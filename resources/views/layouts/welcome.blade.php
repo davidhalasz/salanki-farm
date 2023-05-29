@@ -16,11 +16,6 @@
     </head>
     <body>
         <div class="flex flex-col min-h-screen font-sans text-gray-900 antialiased">
-            <div class="w-full nav-background">
-                <div class="container mx-auto py-4">
-                    @include('components.custom_components.navbar')
-                </div>
-            </div>
             <div class="flex-grow">
                 {{ $slot }}
             </div>

@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Controller;
-
+use App\Http\Livewire\GalleryForm;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,13 +14,9 @@ use App\Http\Controllers\Controller;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('guest.index');
+Route::get('/', [Controller::class, 'fooldal'])->name('guest.index');
 
-Route::get('/farm-lakoi', function () {
-    return view('farm-lakoi');
-})->name('guest.farm-lakoi');
+Route::get('/galeria', [Controller::class, 'galeria'])->name('guest.galeria');
 
 Route::get('/araink', [Controller::class, 'arlista'])->name('guest.araink');
 
@@ -39,6 +35,15 @@ Route::middleware([
     Route::get('/dashboard/szolgaltatasok', function () {
         return view('dashboard.szolgaltatasok');
     })->name('dashboard.szolgaltatasok');
+    Route::get('/dashboard/farm-lakoi', function () {
+        return view('dashboard.farm-lakoi');
+    })->name('dashboard.farm-lakoi');
+    Route::get('/dashboard/galeria', function () {
+        return view('dashboard.galeria');
+    })->name('dashboard.galeria');
+
+    Route::post('/dashboard/galeria-tmp', [GalleryForm::class, 'save'])->name('dashboard.galeria.tmp');
+
     Route::get('/dashboard/kapcsolat', function () {
         return view('dashboard.kapcsolat');
     })->name('dashboard.kapcsolat');

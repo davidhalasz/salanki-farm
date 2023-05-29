@@ -22,6 +22,16 @@
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link href="{{ route('dashboard.farm-lakoi') }}" :active="request()->routeIs('dashboard.farm-lakoi')">
+                        {{ __('Lakók szerkesztése') }}
+                    </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link href="{{ route('dashboard.galeria') }}" :active="request()->routeIs('dashboard.galeria')">
+                        {{ __('Galéria') }}
+                    </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link href="{{ route('dashboard.kapcsolat') }}" :active="request()->routeIs('dashboard.kapcsolat')">
                         {{ __('Kapcsolat és nyitvatartás') }}
                     </x-nav-link>

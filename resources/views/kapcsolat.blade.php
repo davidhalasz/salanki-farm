@@ -1,8 +1,8 @@
 <x-guest-layout>
     <div class="container mx-auto py-10">
-        <h1 class="text-2xl text-center">KAPCSOLAT</h1>
+        <h2 class="text-center text-3xl mb-6">Kapcsolat</h2>
 
-        <div class="w-full flex justify-center py-10">
+        <div class="w-full flex justify-center">
             <div class="w-full mx-12 rounded-lg">
                 <div class="grid grid-cols-3">
                     <div class="col-span-2">
@@ -11,7 +11,7 @@
                             style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
-                    <div class="rounded-r-lg bg-[#6D8176] text-white p-4">
+                    <div class="rounded-r-xl darker-background text-white p-4">
                         <h2 class="text-xl font-bold">Cím</h2>
                         <p class="px-4">
                             Debrecen</br>

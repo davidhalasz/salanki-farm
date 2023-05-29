@@ -1,5 +1,5 @@
-<div class="w-full bg-[#6D8176] mt-auto">
-    <div class="container mx-auto py-10">
+<div class="w-full bg-[#153a5b] mt-auto">
+    <div class="container mx-auto py-10 text-white">
         <div class="grid grid-cols-3">
             <div>
                 <a className="flex items-center" href="https://www.facebook.com/pages/Salánki%20Farm/1704045083056384/">

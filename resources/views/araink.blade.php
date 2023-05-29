@@ -1,19 +1,22 @@
 <x-guest-layout>
     <div class="container mx-auto py-10">
 
-        <h1 class="text-2xl text-center">ÁRLISTA</h1>
+        <h2 class="text-center text-3xl mb-6">Árlista</h2>
 
-        <div class="w-full flex justify-center py-8 text-lg">
-            <table class="table-auto">
-                <tbody>
-                    @foreach ($prices as $price)
-                        <tr>
-                            <td class="py-2 px-4">{{ $price->name }}</td>
-                            <td class="py-2 px-4">{{ $price->price }}</td>
-                        </tr>
-                    @endforeach
-                </tbody>
-            </table>
+        <div class="w-full flex justify-center text-lg">
+            <div class="w-fit darker-background p-2 rounded-xl">
+                <table class="table-auto bg-white rounded-xl">
+                    <tbody>
+                        @foreach ($prices as $price)
+                            <tr>
+                                <td class="border-b border-slate-200 py-2 px-4">{{ $price->name }}</td>
+                                <td class="border-b border-slate-200 py-2 px-4">{{ $price->price }}</td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
+
         </div>
 
     </div>

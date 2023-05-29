@@ -1,43 +1,59 @@
 @php
     $routeName = Route::currentRouteName();
 @endphp
-<nav>
-    <div class="w-full flex flex-wrap items-center justify-between mx-auto p-4 gap-4 text-xl text-white">
-        <a href="#" class="flex items-center">
-            LOGO
-        </a>
-        <div class="flex gap-4">
-            <a href="/">
-                <button
-                    class="px-4 py-2 rounded-sm {{ $routeName == 'guest.index' ? 'bg-[#EECF9C] text-[#693A4E]' : '' }}">
+<nav x-data="{ open: false }" class="bg-transparent">
+    <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center py-4">
+            <a href="#" class="text-white text-xl font-semibold">
+                LOGO
+            </a>
+
+            <!-- Hamburger button -->
+            <div class="flex md:hidden">
+                <button @click="open = !open" class="text-white hover:text-white focus:outline-none">
+                    <svg x-show="!open" class="text-white h-6 w-6" viewBox="0 0 24 24">
+                        <path  fill="white" d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4zm0 5h16v2H4z" />
+                    </svg>
+                    <svg x-show="open" xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+
+                </button>
+            </div>
+
+            <!-- Menu -->
+            <div class="hidden md:flex md:items-center">
+                <a href="/"
+                    class="px-4 py-2 text-lg rounded-sm {{ $routeName == 'guest.index' ? 'underline underline-offset-8 decoration-wavy decoration-green-500 text-white' : 'text-gray-300 hover:text-white' }}">
                     Kezdőlap
-                </button>
-            </a>
-            <a href="/farm-lakoi">
-                <button
-                    class="px-4 py-2 rounded-sm {{ $routeName == 'guest.farm-lakoi' ? 'bg-[#EECF9C] text-[#693A4E]' : '' }}">
-                    Farm lakói
-                </button>
-            </a>
-            <a href="/szolgaltatasok">
-                <button
-                    class="px-4 py-2 rounded-sm {{ $routeName == 'guest.szolgaltatasok' ? 'bg-[#EECF9C] text-[#693A4E]' : '' }}">
+                </a>
+                <a href="/galeria"
+                    class="px-4 py-2 text-lg rounded-sm {{ $routeName == 'guest.galeria' ? 'underline underline-offset-8 decoration-wavy decoration-green-500 text-white' : 'text-gray-300 hover:text-white' }}">
+                    Galéria
+                </a>
+                <a href="/szolgaltatasok"
+                    class="px-4 py-2 text-lg rounded-sm {{ $routeName == 'guest.szolgaltatasok' ? 'underline underline-offset-8 decoration-wavy decoration-green-500 text-white' : 'text-gray-300 hover:text-white' }}">
                     Szolgáltatások
-                </button>
-            </a>
-            <a href="/araink">
-                <button
-                    class="px-4 py-2 rounded-sm {{ $routeName == 'guest.araink' ? 'bg-[#EECF9C] text-[#693A4E]' : '' }}">
+                </a>
+                <a href="/araink"
+                    class="px-4 py-2 text-lg rounded-sm {{ $routeName == 'guest.araink' ? 'underline underline-offset-8 decoration-wavy decoration-green-500 text-white' : 'text-gray-300 hover:text-white' }}">
                     Áraink
-                </button>
-            </a>
-            <a href="/kapcsolat">
-            <button
-                class="px-4 py-2 rounded-sm {{ $routeName == 'guest.kapcsolat' ? 'bg-[#EECF9C] text-[#693A4E]' : '' }}">
-                Kapcsolat
-            </button>
-            </a>
+                </a>
+                <a href="/kapcsolat"
+                    class="px-4 py-2 text-lg rounded-sm {{ $routeName == 'guest.kapcsolat' ? 'underline underline-offset-8 decoration-wavy decoration-green-500 text-white' : 'text-gray-300 hover:text-white' }}">
+                    Kapcsolat
+                </a>
+            </div>
         </div>
 
+        <!-- Mobile menu -->
+        <div x-show="open" class="md:hidden">
+            <a href="/" class="block px-4 py-2 rounded-sm text-white">Kezdőlap</a>
+            <a href="/galeria" class="block px-4 py-2 rounded-sm text-white">Galéria</a>
+            <a href="/szolgaltatasok" class="block px-4 py-2 rounded-sm text-white">Szolgáltatások</a>
+            <a href="/araink" class="block px-4 py-2 rounded-sm text-white">Áraink</a>
+            <a href="/kapcsolat" class="block px-4 py-2 rounded-sm text-white">Kapcsolat</a>
+        </div>
     </div>
 </nav>

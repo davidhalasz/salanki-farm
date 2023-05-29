@@ -6,11 +6,66 @@
     display: none;
 }
 
-
 .hiddenDeleteBtn {
     display: none;
 }
 
 .informationCard:hover .hiddenDeleteBtn {
     display: block;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 93%;
+    background-image: linear-gradient(
+        205deg,
+        hsl(270deg 100% 7%) 0%,
+        hsl(249deg 80% 14%) 23%,
+        hsl(228deg 63% 22%) 42%,
+        hsl(208deg 50% 31%) 58%,
+        hsl(187deg 38% 41%) 72%,
+        hsl(166deg 32% 53%) 83%,
+        hsl(145deg 37% 66%) 92%,
+        hsl(125deg 47% 80%) 99%,
+        hsl(104deg 100% 95%) 100%
+    );
+    clip-path: polygon(0% 0%, 100% 0%, 100% 83%, 0% 100%);
+    z-index: -1;
+}
+
+.nav-background {
+    background-image: linear-gradient(
+        205deg,
+        hsl(270deg 100% 7%) 0%,
+        hsl(249deg 80% 14%) 23%,
+        hsl(228deg 63% 22%) 42%,
+        hsl(208deg 50% 31%) 58%,
+        hsl(187deg 38% 41%) 72%,
+        hsl(166deg 32% 53%) 83%,
+        hsl(145deg 37% 66%) 92%,
+        hsl(125deg 47% 80%) 99%,
+        hsl(104deg 100% 95%) 100%
+    );
+}
+
+.darker-background {
+    background-image: linear-gradient(to right top, #051937, #003256, #004b5b, #006240, #267400);
+}
+
+.circle-background {
+    background-image: linear-gradient(
+        225deg,
+        hsl(250deg 100% 7%) 0%,
+        hsl(229deg 80% 14%) 23%,
+        hsl(208, 63%, 22%) 42%,
+        hsl(188deg 50% 31%) 58%,
+        hsl(167deg 38% 41%) 72%,
+        hsl(146deg 32% 53%) 83%,
+        hsl(125deg 37% 66%) 92%,
+        hsl(105deg 47% 80%) 99%,
+        hsl(84deg 100% 95%) 100%
+    );
 }

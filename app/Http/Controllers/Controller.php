@@ -9,6 +9,8 @@ use App\Models\Opening;
 use App\Models\Information;
 use App\Models\Price;
 use App\Models\Service;
+use App\Models\Animal;
+use App\Models\Gallery;
 
 class Controller extends BaseController
 {
@@ -28,5 +30,15 @@ class Controller extends BaseController
     public function szolgaltatasok() {
         $services = Service::all();
         return view('szolgaltatasok', compact(['services']));
+    }
+
+    public function fooldal() {
+        $animals = Animal::all();
+        return view('welcome', compact(['animals']));
+    }
+
+    public function galeria() {
+        $galleries = Gallery::all();
+        return view('galeria', compact(['galleries']));
     }
 }

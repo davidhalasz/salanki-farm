@@ -1,4 +1,4 @@
-<div class="w-full bg-[#153a5b] mt-auto">
+<div class="w-full bg-[#2174fa] mt-auto">
     <div class="container mx-auto py-10 text-white">
         <div class="grid grid-cols-3">
             <div>

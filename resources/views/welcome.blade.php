@@ -9,10 +9,10 @@
         <div class="container mx-auto">
             <div class="w-full flex justify-center lg:py-10">
                 <div class="w-full rounded-lg bg-transparent">
-                    <div class="grid grid-cols-3 gap-10">
+                    <div class="grid grid-cols-3">
                         <div class="col-span-3 md:col-span-2 p-4">
                             <h2 class="text-4xl md:text-5xl lg:text-6xl text-white md:pb-2 font-bold">Salánki Farm Haláp</h2>
-                            <p class="text-white text-lg mt-4 text-justify">Lorem ipsum dolor sit amet, consectetur
+                            <p class="text-white text-lg mt-4 text-justify md:pr-4">Lorem ipsum dolor sit amet, consectetur
                                 adipiscing elit. Maecenas a
                                 augue
                                 in augue elementum rutrum in in eros. Vestibulum ac scelerisque ligula. Vestibulum
@@ -34,7 +34,7 @@
                         </div>
                         <div class="hidden md:flex items-center justify-center w-full h-full">
                             <div class="w-full dynamic-height">
-                                <img src="{{url('/images/bolygo3.png')}}" alt="Image"/>
+                                <img class="lg:w-5/6" src="{{url('/images/bolygoz5.png')}}" alt="Image"/>
                             </div>
                         </div>
                     </div>

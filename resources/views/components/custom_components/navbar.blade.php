@@ -5,7 +5,7 @@
     <div class="container mx-auto px-4">
         <div class="flex justify-between items-center py-4">
             <a href="#" class="text-white text-xl font-semibold">
-                LOGO
+                <img class="h-20 w-20 rounded-full " src="{{url('/images/logo2.jpg')}}" alt="Image"/>
             </a>
 
             <!-- Hamburger button -->
@@ -25,23 +25,23 @@
             <!-- Menu -->
             <div class="hidden md:flex md:items-center">
                 <a href="/"
-                    class="px-4 py-2 text-lg rounded-sm {{ $routeName == 'guest.index' ? 'underline underline-offset-8 decoration-wavy decoration-green-500 text-white' : 'text-gray-300 hover:text-white' }}">
+                    class="px-4 py-2 text-lg rounded-sm {{ $routeName == 'guest.index' ? 'underline underline-offset-8 decoration-wavy decoration-[#2AF598] text-white' : 'text-white hover:text-white' }}">
                     Kezdőlap
                 </a>
                 <a href="/galeria"
-                    class="px-4 py-2 text-lg rounded-sm {{ $routeName == 'guest.galeria' ? 'underline underline-offset-8 decoration-wavy decoration-green-500 text-white' : 'text-gray-300 hover:text-white' }}">
+                    class="px-4 py-2 text-lg rounded-sm {{ $routeName == 'guest.galeria' ? 'underline underline-offset-8 decoration-wavy decoration-[#2AF598] text-white' : 'text-white hover:text-white' }}">
                     Galéria
                 </a>
                 <a href="/szolgaltatasok"
-                    class="px-4 py-2 text-lg rounded-sm {{ $routeName == 'guest.szolgaltatasok' ? 'underline underline-offset-8 decoration-wavy decoration-green-500 text-white' : 'text-gray-300 hover:text-white' }}">
+                    class="px-4 py-2 text-lg rounded-sm {{ $routeName == 'guest.szolgaltatasok' ? 'underline underline-offset-8 decoration-wavy decoration-[#2AF598] text-white' : 'text-white hover:text-white' }}">
                     Szolgáltatások
                 </a>
                 <a href="/araink"
-                    class="px-4 py-2 text-lg rounded-sm {{ $routeName == 'guest.araink' ? 'underline underline-offset-8 decoration-wavy decoration-green-500 text-white' : 'text-gray-300 hover:text-white' }}">
+                    class="px-4 py-2 text-lg rounded-sm {{ $routeName == 'guest.araink' ? 'underline underline-offset-8 decoration-wavy decoration-[#2AF598] text-white' : 'text-white hover:text-white' }}">
                     Áraink
                 </a>
                 <a href="/kapcsolat"
-                    class="px-4 py-2 text-lg rounded-sm {{ $routeName == 'guest.kapcsolat' ? 'underline underline-offset-8 decoration-wavy decoration-green-500 text-white' : 'text-gray-300 hover:text-white' }}">
+                    class="px-4 py-2 text-lg rounded-sm {{ $routeName == 'guest.kapcsolat' ? 'underline underline-offset-8 decoration-wavy decoration-[#2AF598] text-white' : 'text-white hover:text-white' }}">
                     Kapcsolat
                 </a>
             </div>

@@ -51,7 +51,7 @@
                         @foreach ($animals as $animal)
                             <div class="w-[200px] dynamic-height mb-8">
                                 <img class="w-full h-full object-cover rounded-full"
-                                    src="{{ URL::asset('storage/farm-lakoi/' . $animal->filepath) }}" />
+                                    src="{{ URL::asset('storage/' . $animal->filepath) }}" />
                                 <p class="text-center font-bold text-lg">{{ $animal->name }}</p>
                             </div>
                         @endforeach

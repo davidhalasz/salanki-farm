@@ -1,8 +1,7 @@
 <?php
-
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Controller;
 use App\Http\Livewire\GalleryForm;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Route;
 /*
 |--------------------------------------------------------------------------
 | Web Routes

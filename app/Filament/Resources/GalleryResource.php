@@ -10,12 +10,15 @@ use Filament\Resources\Form;
 use Filament\Resources\Table;
 use Filament\Resources\Resource;
 use Filament\Forms\Components\Card;
+use Filament\Tables\Actions\Action;
+use Filament\Tables\Actions\BulkAction;
+use Illuminate\Support\Facades\Storage;
+use Filament\Tables\Columns\ImageColumn;
 use Filament\Forms\Components\FileUpload;
 use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\GalleryResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Resources\GalleryResource\RelationManagers;
-use Filament\Tables\Columns\ImageColumn;
 
 class GalleryResource extends Resource
 {
@@ -65,10 +68,34 @@ class GalleryResource extends Resource
                 ]),
             ])
             ->actions([
-                Tables\Actions\DeleteAction::make()->modalHeading('Kép törlése'),
+                Action::make('Törlés')
+                    ->action(function (Gallery $record) {
+                        if(Storage::exists('public/'.$record->filepath)) {
+                            Storage::delete('public/'.$record->filepath);
+                        }
+                        $record->delete();
+                    })
+                    ->icon('heroicon-o-trash')
+                    ->color('danger')
+                    ->modalHeading('Kép törlése')
+                    ->requiresConfirmation()
+,
             ])
             ->bulkActions([
-                Tables\Actions\DeleteBulkAction::make()->modalHeading('Kiválasztott kép(ek) törlése'),
+                BulkAction::make('Törlés')
+                    ->action(function ($records) {
+                        foreach ($records as $record) {
+                            if(Storage::exists('public/'.$record->filepath)) {
+                                Storage::delete('public/'.$record->filepath);
+                            }
+                            $record->delete();
+                        }
+                    })
+                    ->modalHeading('Kiválasztott kép(ek) törlése')
+                    ->deselectRecordsAfterCompletion()
+                    ->requiresConfirmation()
+                    ->color('danger')
+                    ->icon('heroicon-o-trash')
             ])
             ->contentGrid([
                 'md' => 2,

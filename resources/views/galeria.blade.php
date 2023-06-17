@@ -3,7 +3,7 @@
         <h2 class="text-center text-3xl mb-6">Galéria</h2>
         <div class="flex flex-wrap gap-1">
             @foreach ($galleries as $index => $gallery)
-                <div x-data="{ open: false, currentIndex: {{ $index }}, countImages: {{ count($galleries) }}, galleries: {{ $galleries->toJson() }}, get imageUrl() { return '{{ URL::asset('storage/galeria/') }}' + '/' + this.galleries[this.currentIndex].filepath; } }">
+                <div x-data="{ open: false, currentIndex: {{ $index }}, countImages: {{ count($galleries) }}, galleries: {{ $galleries->toJson() }}, get imageUrl() { return '{{ URL::asset('storage/') }}' + '/' + this.galleries[this.currentIndex].filepath; } }">
                     <img :src="'{{ URL::asset('storage/' . $gallery->filepath) }}'"
                         class="h-52 w-52 object-cover rounded-xl cursor-pointer" @click="open = true" />
 

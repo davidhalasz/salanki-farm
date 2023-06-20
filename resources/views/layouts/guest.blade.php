@@ -24,7 +24,7 @@
             <div class="flex-grow">
                 {{ $slot }}
             </div>
-            @include('components.custom_components.footer')
+
         </div>
     </body>
 </html>

@@ -3,7 +3,7 @@
         <h2 class="text-center text-3xl mb-6">Kapcsolat</h2>
 
         <div class="w-full flex justify-center">
-            <div class="w-full mx-12 rounded-lg">
+            <div class="w-full mx-12 rounded-lg border-r-4 border-green-500 bg-white">
                 <div class="grid grid-cols-3">
                     <div class="col-span-2">
                         <iframe class="w-full h-full rounded-l-md"
@@ -11,7 +11,7 @@
                             style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
-                    <div class="rounded-r-xl darker-background text-white p-4">
+                    <div class="rounded-r-xl darker-background text-customGreen p-4">
                         <h2 class="text-xl font-bold">Cím</h2>
                         <p class="px-4">
                             Debrecen</br>
@@ -29,8 +29,8 @@
                                 @foreach ($openings as $opening)
                                 <tr>
                                     <td class="px-4">{{$opening->day}}</td>
-                                    <td class="px-4">{{$opening->closed 
-                                        ? "Zárva" 
+                                    <td class="px-4">{{$opening->closed
+                                        ? "Zárva"
                                         : \Carbon\Carbon::parse($opening->start)->format('H:i') . ' - ' . \Carbon\Carbon::parse($opening->end)->format('H:i') }}
                                     </td>
                                 </tr>

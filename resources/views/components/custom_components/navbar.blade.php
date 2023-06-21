@@ -12,7 +12,7 @@
             <div class="flex md:hidden">
                 <button @click="open = !open" class="text-[#2174fa] hover:text-[#2174fa] focus:outline-none">
                     <svg x-show="!open" class="text-[#2174fa] h-6 w-6" viewBox="0 0 24 24">
-                        <path  fill="white" d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4zm0 5h16v2H4z" />
+                        <path  fill="#2174fa" d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4zm0 5h16v2H4z" />
                     </svg>
                     <svg x-show="open" xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="w-6 h-6">
@@ -28,8 +28,8 @@
                     class="px-4 py-2 text-lg font-bold rounded-sm {{ $routeName == 'guest.index' ? 'underline underline-offset-8 decoration-wavy decoration-[#84c224] text-[#2174fa]' : 'text-[#2174fa] hover:text-[#2174fa]' }}">
                     Kezdőlap
                 </a>
-                <a href="/galeria"
-                    class="px-4 py-2 text-lg font-bold rounded-sm {{ $routeName == 'guest.galeria' ? 'underline underline-offset-8 decoration-wavy decoration-[#84c224] text-[#2174fa]' : 'text-[#2174fa] hover:text-[#2174fa]' }}">
+                <a href="/kepek"
+                    class="px-4 py-2 text-lg font-bold rounded-sm {{ $routeName == 'guest.kepek' ? 'underline underline-offset-8 decoration-wavy decoration-[#84c224] text-[#2174fa]' : 'text-[#2174fa] hover:text-[#2174fa]' }}">
                     Galéria
                 </a>
                 <a href="/szolgaltatasok"

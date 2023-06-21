@@ -1,12 +1,12 @@
 <x-welcome-layout>
-    <div class="relative pb-36 md:pb-24 lg:pb-10 xl:pb-0">
+    <div class="relative lg:pb-24 xl:pb-0">
 
         <div class="w-full bg-transparent">
             <div class="container mx-auto py-4 text-[#2174fa]">
                 @include('components.custom_components.navbar')
             </div>
         </div>
-        <div class="background w-full h-[600px] relative bg-white">
+        <div class="background w-full h-[300px] lg:h-[600px] relative bg-white">
             <div class="elementor-shape elementor-shape-top">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 283.5 27.8" preserveAspectRatio="none">
                     <path class="elementor-shape-fill"
@@ -73,18 +73,20 @@
         </div>
 
         <div class="secondSection container mx-auto text-left py-12 min-h-[820px]">
-            <h1 class="text-4xl text-[#2174fa] py-4 caveatFont text-center">Quality eggs at wholesale prices!</h1>
-            <h1 class="text-4xl boldInter py-4 customGreen text-center">Üdvözöljük a Salánki Farm honlapján!</h1>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <div class="order-last md:order-first relative w-full h-[250px] md:h-full">
-                    <div class="light-shape h-64 w-64 absolute"></div>
-                    <div class="yellow-shape h-64 w-64 absolute mini-image-mask"></div>
+            <h1 class="text-2xl lg:text-4xl text-[#2174fa] py-4 caveatFont text-center">Quality eggs at wholesale
+                prices!</h1>
+            <h1 class="text-2xl lg:text-4xl boldInter py-4 customGreen text-center">Üdvözöljük a Salánki Farm honlapján!
+            </h1>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="order-last lg:order-first relative w-full h-[250px] lg:h-full">
+                    <div class="light-shape absolute"></div>
+                    <div class="yellow-shape absolute mini-image-mask"></div>
                     <div class="absolute teve-image image-mask image-background h-[500px] w-[630px]"></div>
-                    <div class="absolute grass-shape h-32 w-32 z-5"></div>
+                    <div class="absolute grass-shape z-5"></div>
                 </div>
                 <div class="w-full h-full">
                     <div class="w-full rounded-lg border-l-4 border-green-500 bg-white mt-20 p-10">
-                        <h2 class="text-xl boldInter customGreen">
+                        <h2 class="text-lg lg:text-xl boldInter customGreen">
                             We supply restaurants, cafes, bakeries & even independent supermarkets
                         </h2>
                         <p class="mt-4 text-gray-600">
@@ -133,16 +135,17 @@
             <div class="container mx-auto">
                 <div class="py-32 grid grid-cols-1 lg:grid-cols-2 gap-12">
                     <div class="py-4">
-                        <h2 class="text-4xl text-[#2174fa] py-4 caveatFont">Providing quality poultry since 1983</h2>
-                        <h2 class="text-4xl boldInter py-4 customGreen">
+                        <h2 class="text-2xl lg:text-4xl text-[#2174fa] py-4 caveatFont">Providing quality poultry since
+                            1983</h2>
+                        <h2 class="text-xl lg:text-4xl boldInter py-4 customGreen">
                             As the owner of eggs & poultry farm, I personally take care of the products we offer our
                             clients and partners
                         </h2>
-                        <p class="text-gray-600 py-2 text-lg">
+                        <p class="text-gray-600 py-2 lg:text-lg">
                             Amet consectetur adipiscing elit duis tristique sollicitudin nibh. Platea dictumst
                             vestibulum rhoncus est pellentesque.
                         </p>
-                        <p class="text-gray-600 py-2 text-lg">
+                        <p class="text-gray-600 py-2 lg:text-lg">
                             Curabitur gravida arcu ac tortor. Non consectetur a erat nam at. Facilisis magna etiam
                             tempor orci eu lobortis elementum nibh tellus. Sollicitudin aliquam ultrices sagittis orci a
                             scelerisque purus.
@@ -151,7 +154,7 @@
                     <div>
                         <div class="ml-10 relative flex h-full">
                             <div
-                                class="w-1/3 absolute yellowCard -ml-10 mt-8 p-8 rounded-xl text-xl xl:text-2xl font-bold">
+                                class="w-2/3 lg:w-1/3 absolute yellowCard -ml-10 mt-8 p-4 lg:p-8 rounded-xl text-xl xl:text-2xl font-bold">
                                 <h2>Our poultry is fed on an entirely vegetarian diet</h2>
                             </div>
                             <img class="w-full h-full object-cover rounded-xl" src="{{ asset('/images/three2.jpeg') }}"
@@ -193,51 +196,18 @@
                 </svg>
             </div>
         </div>
-        <div class="fourSection container mx-auto text-left py-12">
-            <h1 class="text-4xl text-[#2174fa] py-4 caveatFont text-center">A farm lakói</h1>
-            <h1 class="text-4xl boldInter py-4 customGreen text-center mb-12">Lorem ipsum dolor et</h1>
-            <div class="grid grid-cols-3  md:grid-cols-4 lg:grid-cols-6 gap-8">
-                <div class="text-center">
-                    <div class="animal animal1 h-[200px] w-full"></div>
-                    <p class="text-xl font-bold customGreen mt-2">Kecske</p>
-                </div>
-                <div class="text-center">
-                    <div class="animal animal2 h-[200px] w-full"></div>
-                    <p class="text-xl font-bold customGreen mt-2">Láma</p>
-                </div>
-                <div class="text-center">
-                    <div class="animal animal3 h-[200px] w-full"></div>
-                    <p class="text-xl font-bold customGreen mt-2">Ló</p>
-                </div>
-                <div class="text-center">
-                    <div class="animal animal4 h-[200px] w-full"></div>
-                    <p class="text-xl font-bold customGreen mt-2">Nyúl</p>
-                </div>
-                <div class="text-center">
-                    <div class="animal animal5 h-[200px] w-full"></div>
-                    <p class="text-xl font-bold customGreen mt-2">Páva</p>
-                </div>
-                <div class="text-center">
-                    <div class="animal animal7 h-[200px] w-full"></div>
-                    <p class="text-xl font-bold customGreen mt-2">Teve</p>
-                </div>
-
-                <div class="text-center">
-                    <div class="animal animal8 h-[200px] w-full"></div>
-                    <p class="text-xl font-bold customGreen mt-2">Szárnyasok</p>
-                </div>
-                <div class="text-center">
-                    <div class="animal animal9 h-[200px] w-full"></div>
-                    <p class="text-xl font-bold customGreen mt-2">Papagáj</p>
-                </div>
-                <div class="text-center">
-                    <div class="animal animal10 h-[200px] w-full"></div>
-                    <p class="text-xl font-bold customGreen mt-2">Strucc</p>
-                </div>
-                <div class="text-center">
-                    <div class="animal animal11 h-[200px] w-full"></div>
-                    <p class="text-xl font-bold customGreen mt-2">Teknős</p>
-                </div>
+        <div x-data="{ shown: false }" x-intersect="shown = true"
+            class="fourSection container mx-auto text-left py-12">
+            <h1 class="text-2xl lg:text-4xl text-[#2174fa] py-4 caveatFont text-center">A farm lakói</h1>
+            <h1 class="text-2xl lg:text-4xl boldInter py-4 customGreen text-center mb-12">Találkozz velük a farmunkon!
+            </h1>
+            <div class="grid grid-cols-3  lg:grid-cols-4 lg:grid-cols-6 gap-8">
+                @foreach ($animals as $animal)
+                    <div class="text-center">
+                        <div class="animal h-[100px] lg:h-[200px] w-full" style="background-image: url('{{ URL::asset('/storage/'.$animal->filepath) }}')"></div>
+                        <p class="text-lg lg:text-xl font-bold customGreen mt-2">{{$animal->name}}</p>
+                    </div>
+                @endforeach
             </div>
         </div>
 
@@ -274,28 +244,76 @@
                 </svg>
             </div>
 
-            <div class="fourSection container mx-auto text-left py-12 min-h-[820px]">
-                <h1 class="text-4xl text-[#2174fa] py-4 caveatFont text-center">Galéria</h1>
-                <h1 class="text-4xl boldInter py-4 customGreen text-center">Ismerd meg a farmunkat!</h1>
-                <div class="grid grid-cols-8 gap-4 mt-12">
-                    <img class="col-span-2 rounded-xl object-cover h-[200px] w-full"
-                        src="{{ asset('/galeria/1.jpg') }}" />
-                    <img class="col-span-2 rounded-xl object-cover h-[200px] w-full"
-                        src="{{ asset('/galeria/2.jpg') }}" />
-                    <img class="col-span-2 rounded-xl object-cover h-[200px] w-full"
-                        src="{{ asset('/galeria/3.jpg') }}" />
-                    <img class="col-span-2 rounded-xl object-cover h-[200px] w-full"
-                        src="{{ asset('/galeria/11.jpg') }}" />
-
-                    <img class="col-span-2 rounded-xl object-cover h-[200px] w-full"
-                        src="{{ asset('/galeria/5.jpg') }}" />
-                    <img class="rounded-xl object-cover h-[200px] w-full" src="{{ asset('/galeria/6.jpg') }}" />
-                    <img class="col-span-2 rounded-xl object-cover object-center h-[200px] w-full"
-                        src="{{ asset('/galeria/7.jpg') }}" />
-                    <img class="rounded-xl object-cover h-[200px] w-full" src="{{ asset('/galeria/8.jpg') }}" />
-                    <img class="col-span-2 rounded-xl object-cover h-[200px] w-full"
-                        src="{{ asset('/galeria/14.jpeg') }}" />
+            <div x-data="{
+                currentImage: '',
+                currentIndex: 0,
+                images: [
+                    { src: '{{ asset('/galeria/1.jpg') }}', lgColSpan: 2 },
+                    { src: '{{ asset('/galeria/2.jpg') }}', lgColSpan: 2 },
+                    { src: '{{ asset('/galeria/3.jpg') }}', lgColSpan: 2 },
+                    { src: '{{ asset('/galeria/11.jpg') }}', lgColSpan: 2 },
+                    { src: '{{ asset('/galeria/5.jpg') }}', lgColSpan: 2 },
+                    { src: '{{ asset('/galeria/6.jpg') }}' },
+                    { src: '{{ asset('/galeria/7.jpg') }}', lgColSpan: 2 },
+                    { src: '{{ asset('/galeria/8.jpg') }}' },
+                    { src: '{{ asset('/galeria/14.jpeg') }}', lgColSpan: 2 }
+                ]
+            }" class="fourSection container mx-auto text-left py-12 min-h-[820px]">
+                <h1 class="text-2xl lg:text-4xl text-[#2174fa] py-4 caveatFont text-center">Galéria</h1>
+                <h1 class="text-2xl lg:text-4xl boldInter py-4 customGreen text-center">Ismerd meg a farmunkat!</h1>
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-2 lg:gap-4 mt-12">
+                    <template x-for="(image, index) in images" :key="index">
+                        <img x-on:click="currentImage = image.src; currentIndex = index; disableScroll()"
+                            :class="{ 'lg:col-span-2': image.lgColSpan === 2, 'lg:col-span-1': image.lgColSpan !== 2 }"
+                            class="rounded-xl object-cover h-[100px] lg:h-[200px] w-full cursor-pointer"
+                            :src="image.src" />
+                    </template>
                 </div>
+
+                <div x-show="currentImage" x-on:click.self="currentImage = ''; enableScroll()"
+                    class="fixed top-0 left-0 z-10 w-screen h-screen flex items-center justify-center bg-black/90 bg-opacity-90 bg-blur-md">
+                    <div class="relative">
+                        <img class="py-10 px-28 max-h-screen max-w-6/12 object-contain" :src="currentImage" />
+                    </div>
+                </div>
+
+                <!-- CLOSE -->
+                <div x-show="currentImage" class="fixed right-10 top-10 flex z-50 w-14 h-14">
+                    <button x-on:click="currentImage = ''; enableScroll()" class="text-white font-bold">
+                        <svg class="w-10 h-10 mr-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- PREV and NEXT -->
+                <div x-show="currentImage" class="fixed inset-y-0 left-0 flex items-center ml-4 z-50">
+                    <button x-show="currentIndex > 0"
+                        x-on:click="currentIndex--; currentImage = images[currentIndex].src"
+                        class="text-white font-bold">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"
+                            stroke="currentColor" class="w-10 h-10 ml-5">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                        </svg>
+                    </button>
+                </div>
+                <div x-show="currentImage" class="fixed inset-y-0 right-0 flex items-center mr-4 z-50">
+                    <button x-show="currentIndex < images.length - 1"
+                        x-on:click="currentIndex++; currentImage = images[currentIndex].src"
+                        class="text-white font-bold">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"
+                            stroke="currentColor" class="w-10 h-10 mr-5">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="w-full flex justify-end pt-4">
+                    <a href="/kepek"><button class="bg-[#2174fa] px-4 py-2 rounded-xl text-white font-bold">Még több
+                            kép</button></a>
+                </div>
+
             </div>
 
             <div class="elementor-shape elementor-shape-bottom">
@@ -334,6 +352,14 @@
 
 
     <script>
+        function disableScroll() {
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function enableScroll() {
+            document.body.classList.remove('overflow-hidden');
+        }
+
         function setDynamicHeight() {
             const dynamicDivs = document.querySelectorAll('.dynamic-height');
             dynamicDivs.forEach((div) => {

@@ -1,5 +1,5 @@
 <div class="container mx-auto py-14">
-    <div class="grid grid-cols-3">
+    <div class="grid grid-cols-1 lg:grid-cols-3">
         <div>
             <img class="h-20 w-20 rounded-full " src="{{url('/images/logo2.jpg')}}" alt="Image"/>
         </div>

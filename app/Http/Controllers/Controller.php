@@ -41,4 +41,9 @@ class Controller extends BaseController
         $galleries = Gallery::all();
         return view('galeria', compact(['galleries']));
     }
+
+    public function kepek() {
+        $galleries = Gallery::all();
+        return view('galeria', compact(['galleries']));
+    }
 }

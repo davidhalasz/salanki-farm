@@ -114,12 +114,13 @@ body {
     background-size: cover;
 }
 
-
 .yellow-shape {
     transform: rotateZ(22deg);
     background-color: #f6ce21;
     top: 29%;
     left: 12%;
+    width: 256px;
+    height: 256px;
 }
 
 .teve-image {
@@ -135,6 +136,8 @@ body {
     transform: rotateZ(22deg);
     background-color: #1e4719;
     left: -45px;
+    width: 256px;
+    height: 256px;
 }
 
 .grass-shape {
@@ -146,18 +149,19 @@ body {
     background-color: #84c224;
     top: 160%;
     left: 70%;
+    width: 128px;
+    height: 128px;
 }
 
-
-
-
-@media (min-width:1024px) and (max-width: 1300px) {
-    .light-shape, .yellow-shape {
+@media (min-width: 1024px) and (max-width: 1300px) {
+    .light-shape,
+    .yellow-shape {
         width: 200px;
         height: 200px;
     }
 
-    .yellow-shape, .teve-image {
+    .yellow-shape,
+    .teve-image {
         top: 22%;
     }
 
@@ -173,41 +177,47 @@ body {
     }
 }
 
-
-@media (min-width:768px) and (max-width: 1023px) {
-    .light-shape, .yellow-shape {
+@media (min-width: 768px) and (max-width: 1023px) {
+    .light-shape,
+    .yellow-shape {
         width: 150px;
         height: 150px;
     }
 
     .light-shape {
-        left: -90px;
-    }
-
-    .yellow-shape {
         left: 0px;
     }
 
-    .yellow-shape, .teve-image {
-        top: 12%;
+    .yellow-shape {
+        left: 90px;
+    }
+
+    .yellow-shape,
+    .teve-image {
+        top: 16%;
     }
 
     .teve-image {
         width: 450px;
         height: 320px;
-        left: -20px;
+        left: 60px;
     }
 
     .grass-shape {
         width: 70px;
         height: 70px;
-        top: 80%;
+        top: 90%;
+        left: 400px;
+    }
+
+    .secondSection {
+        min-height: 900px;
     }
 }
 
 @media screen and (max-width: 767px) {
-
-    .light-shape, .yellow-shape {
+    .light-shape,
+    .yellow-shape {
         width: 150px;
         height: 150px;
     }
@@ -220,7 +230,8 @@ body {
         left: 100px;
     }
 
-    .yellow-shape, .teve-image {
+    .yellow-shape,
+    .teve-image {
         top: 18%;
     }
 
@@ -236,14 +247,49 @@ body {
         left: 350px;
         top: 95%;
     }
+    .secondSection {
+        min-height: 900px;
+    }
 }
 
+@media screen and (max-width: 470px) {
+    .light-shape,
+    .yellow-shape {
+        width: 100px;
+        height: 100px;
+    }
+
+    .light-shape {
+        left: 0px;
+    }
+
+    .yellow-shape {
+        left: 60px;
+    }
+
+    .yellow-shape,
+    .teve-image {
+        top: 10%;
+    }
+
+    .teve-image {
+        width: 350px;
+        height: 220px;
+        left: 10px;
+    }
+
+    .grass-shape {
+        width: 70px;
+        height: 70px;
+        left: 220px;
+        top: 70%;
+    }
+}
 
 .yellowCard {
     background-color: #f6ce21;
-    color: #f7f7f7;;
+    color: #f7f7f7;
 }
-
 
 .animal {
     background-position: center;
@@ -284,7 +330,6 @@ body {
     background-image: url("/public/lakok/teve2.jpeg");
 }
 
-
 .animal8 {
     background-image: url("/public/lakok/csirke2.jpeg");
 }
@@ -300,3 +345,22 @@ body {
 .animal11 {
     background-image: url("/public/lakok/teknos2.jpeg");
 }
+
+.card {
+    background-color: #f7f7f7;
+}
+
+
+#animatedDiv {
+    opacity: 0;
+    position: relative;
+    transition-property: opacity, transform;
+  }
+
+  .opacity-0 {
+    opacity: 0;
+  }
+
+  .transform {
+    transform: translateY(5px); /* Adjust this value to control the initial position */
+  }

@@ -32,7 +32,6 @@ class ServiceResource extends Resource
                     ->maxLength(255)
                     ->label('Szolgáltatás neve'),
                 Forms\Components\Textarea::make('description')
-                    ->required()
                     ->maxLength(65535)
                     ->label('Leírás'),
             ]);

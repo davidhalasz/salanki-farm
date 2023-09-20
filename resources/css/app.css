@@ -107,6 +107,8 @@ body {
     -webkit-mask-repeat: no-repeat;
 }
 
+/* TEVE SHAPE */
+
 .image-background {
     background-image: url("/public/images/teve.jpeg");
     background-position: center;
@@ -117,14 +119,14 @@ body {
 .yellow-shape {
     transform: rotateZ(22deg);
     background-color: #f6ce21;
-    top: 29%;
+    top: 25%;
     left: 12%;
     width: 256px;
     height: 256px;
 }
 
 .teve-image {
-    top: 29%;
+    top: 25%;
     left: 13%;
 }
 
@@ -135,6 +137,7 @@ body {
     -webkit-mask-repeat: no-repeat;
     transform: rotateZ(22deg);
     background-color: #1e4719;
+    top: 16%;
     left: -45px;
     width: 256px;
     height: 256px;
@@ -147,13 +150,14 @@ body {
     -webkit-mask-repeat: no-repeat;
     transform: rotateZ(22deg);
     background-color: #84c224;
-    top: 160%;
-    left: 70%;
+    top: 70%;
+    left: 500px;
     width: 128px;
     height: 128px;
 }
 
 @media (min-width: 1024px) and (max-width: 1300px) {
+
     .light-shape,
     .yellow-shape {
         width: 200px;
@@ -173,7 +177,8 @@ body {
     .grass-shape {
         width: 96px;
         height: 96px;
-        top: 110%;
+        top: 55%;
+        left: 350px;
     }
 }
 
@@ -185,6 +190,7 @@ body {
     }
 
     .light-shape {
+        top: 0px;
         left: 0px;
     }
 
@@ -206,8 +212,8 @@ body {
     .grass-shape {
         width: 70px;
         height: 70px;
-        top: 90%;
-        left: 400px;
+        top: 80%;
+        left: 350px;
     }
 
     .secondSection {
@@ -223,29 +229,30 @@ body {
     }
 
     .light-shape {
+        top: 0px;
         left: 0px;
     }
 
     .yellow-shape {
-        left: 100px;
+        left: 90px;
     }
 
     .yellow-shape,
     .teve-image {
-        top: 18%;
+        top: 15%;
     }
 
     .teve-image {
         width: 400px;
         height: 270px;
-        left: 80px;
+        left: 70px;
     }
 
     .grass-shape {
         width: 70px;
         height: 70px;
-        left: 350px;
-        top: 95%;
+        left: 300px;
+        top: 70%;
     }
     .secondSection {
         min-height: 900px;
@@ -282,7 +289,7 @@ body {
         width: 70px;
         height: 70px;
         left: 220px;
-        top: 70%;
+        top: 50%;
     }
 }
 
@@ -364,3 +371,59 @@ body {
   .transform {
     transform: translateY(5px); /* Adjust this value to control the initial position */
   }
+
+
+  /* szolgaltatasok */
+
+  ol {
+    width: 100%;
+    margin-inline: auto;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    list-style: none;
+    counter-reset: stepnr;
+  }
+
+
+  ol li {
+    counter-increment: stepnr;
+    width: 18rem;
+    aspect-ratio: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: calc(2rem + 2rem);
+    position: relative;
+  }
+  ol li::before,
+  ol li::after {
+    inset: 0;
+    position: absolute;
+    border-radius: 50%;
+    border: 2rem solid #fff;
+    line-height: 1.1;
+  }
+  ol li::before {
+    content: counter(stepnr);
+    color: #2174fa;
+    padding-left: 10rem;
+    font-size: 12rem;
+    font-weight: 700;
+    overflow: hidden;
+  }
+
+  ol li::after {
+    content: "";
+    filter: drop-shadow(-0.25rem 0.25rem 0.0675rem rgba(0, 0, 0, 0.75)) blur(5px);
+  }
+
+  ol li > * { width: 7.5rem }
+  ol li .title { font-size: 1.3rem; font-weight: 500 }
+  ol li .descr { font-size: 0.9rem; font-weight: 300 }
+
+  .credits { margin-top: 2rem; text-align: right }
+  .credits a { color: var(--color) }

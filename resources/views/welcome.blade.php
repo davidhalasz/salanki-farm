@@ -72,13 +72,12 @@
             </div>
         </div>
 
-        <div class="secondSection container mx-auto text-left py-12 min-h-[820px]">
-            <h1 class="text-2xl lg:text-4xl text-[#2174fa] py-4 caveatFont text-center">Quality eggs at wholesale
-                prices!</h1>
+        <div class="secondSection container mx-auto text-left py-12 md:min-h-[820px]">
+            <h1 class="text-2xl lg:text-4xl text-[#2174fa] py-4 caveatFont text-center">Gyerek Quadozás, Ugrálóvár, Állatsimogató</h1>
             <h1 class="text-2xl lg:text-4xl boldInter py-4 customGreen text-center">Üdvözöljük a Salánki Farm honlapján!
             </h1>
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                <div class="order-last lg:order-first relative w-full h-[250px] lg:h-full">
+                <div class="order-last lg:order-first relative w-full h-[350px] lg:h-[250px] lg:h-full">
                     <div class="light-shape absolute"></div>
                     <div class="yellow-shape absolute mini-image-mask"></div>
                     <div class="absolute teve-image image-mask image-background h-[500px] w-[630px]"></div>
@@ -87,13 +86,68 @@
                 <div class="w-full h-full">
                     <div class="w-full rounded-lg border-l-4 border-green-500 bg-white mt-20 p-10">
                         <h2 class="text-lg lg:text-xl boldInter customGreen">
-                            We supply restaurants, cafes, bakeries & even independent supermarkets
+                            Gyertek és töltsétek el nálunk a szabadidőtöket, töltődjetek fel a két hektáros területünkön az erdő árnyékában.
                         </h2>
-                        <p class="mt-4 text-gray-600">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec
-                            ullamcorper
-                            mattis, pulvinar dapibus leo.
+                        <p class="mt-4 text-gray-600 mb-6">
+                            Nem csak a képeken látható állatok várnak benneteket sok szeretettel, hanem Mi is az alábbi szolgáltatásokkal:
                         </p>
+                        <ul class=" list-inside list-disc text-lg font-bold">
+                            <li>Állatsimogató</li>
+                            <li>Ugrálóvár</li>
+                            <li>Gyerek quadozás</li>
+                            <li>Elektromos kisautó</li>
+                            <li>Lovas szekrezés</li>
+                            <li>Játszótér</li>
+                        </ul>
+                        <div class="flex">
+                            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/css/splide.min.css">
+                            <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/js/splide.min.js" ></script>
+
+                            <div
+                            x-data="{
+                                init() {
+                                    new Splide(this.$refs.splide, {
+                                        perPage: 1,
+                                        gap: '0.5rem',
+                                        breakpoints: {
+                                            640: {
+                                                perPage: 1,
+                                            },
+                                        },
+                                    }).mount()
+                                },
+                            }"
+                        >
+                            <section x-ref="splide" class="splide">
+                                <div class="splide__track">
+                                    <ul class="splide__list">
+                                        <li class="splide__slide flex flex-col items-center justify-center pb-8">
+                                            <img class="w-full rounded-lg" src="{{asset('images/nyito.jpg')}}" alt="placeholder image">
+                                        </li>
+                                        <li class="splide__slide flex flex-col items-center justify-center pb-8">
+                                            <img class="w-full rounded-lg" src="{{asset('images/salankifarm1.jpg')}}" alt="placeholder image">
+                                        </li>
+                                        <li class="splide__slide flex flex-col items-center justify-center pb-8">
+                                            <img class="w-full rounded-lg" src="{{asset('images/salankifarm2.jpg')}}" alt="placeholder image">
+                                        </li>
+                                        <li class="splide__slide flex flex-col items-center justify-center pb-8">
+                                            <img class="w-full rounded-lg" src="{{asset('images/salankifarm3.jpg')}}" alt="placeholder image">
+                                        </li>
+                                        <li class="splide__slide flex flex-col items-center justify-center pb-8">
+                                            <img class="w-full rounded-lg" src="{{asset('images/salankifarm4.jpg')}}" alt="placeholder image">
+                                        </li>
+                                        <li class="splide__slide flex flex-col items-center justify-center pb-8">
+                                            <img class="w-full rounded-lg" src="{{asset('images/salankifarm5.jpg')}}" alt="placeholder image">
+                                        </li>
+                                        <li class="splide__slide flex flex-col items-center justify-center pb-8">
+                                            <img class="w-full rounded-lg" src="{{asset('images/salankifarm6.jpg')}}" alt="placeholder image">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </section>
+                        </div>
+
+                        </div>
                     </div>
                 </div>
             </div>
@@ -132,32 +186,31 @@
                 </svg>
             </div>
 
-            <div class="container mx-auto">
+            <div class="container mx-auto px-2 lg:px-0">
                 <div class="py-32 grid grid-cols-1 lg:grid-cols-2 gap-12">
                     <div class="py-4">
-                        <h2 class="text-2xl lg:text-4xl text-[#2174fa] py-4 caveatFont">Providing quality poultry since
-                            1983</h2>
+                        <h2 class="text-2xl lg:text-4xl text-[#2174fa] py-4 caveatFont">Milyen nálunk egy nap?</h2>
                         <h2 class="text-xl lg:text-4xl boldInter py-4 customGreen">
-                            As the owner of eggs & poultry farm, I personally take care of the products we offer our
-                            clients and partners
+                            Csütörtöktől - Vasárnapig 10 - 18 óráig vár mindenkit a <span class="text-[#2174fa]">Salánki Farm Haláp</span>
                         </h2>
                         <p class="text-gray-600 py-2 lg:text-lg">
-                            Amet consectetur adipiscing elit duis tristique sollicitudin nibh. Platea dictumst
-                            vestibulum rhoncus est pellentesque.
+                            Csütörtök és Pénteken: Ingyenes ugrálóvár <br>
+                            Szombaton és Vaszárnap: Ingyenes limonádé a gyerekeknek
                         </p>
                         <p class="text-gray-600 py-2 lg:text-lg">
-                            Curabitur gravida arcu ac tortor. Non consectetur a erat nam at. Facilisis magna etiam
-                            tempor orci eu lobortis elementum nibh tellus. Sollicitudin aliquam ultrices sagittis orci a
-                            scelerisque purus.
+                            Gyere etesd meg Szultánt a teve csikónkat, Csokit, és Barnust az alpaka párt! A szeretetre vágyó nyuszi csapatot, a Holland Törpekecske kismamákat, Fülest és Szamarat. Majd amikor elfáradtál az ugrálóvárban, quadozz egyet apával, vagy anyával közösen. Majd végül egy jó Hortobágyi slambuccal, paprikás krumplival, vagy egy jó bográcsos töltött káposztával tele pocival mehetsz az erdő hűsében lovasszekerezni, hogy jól elfáradva  zárd a napot! (Főzés, szekerezés, egyelőre csak hétvégén.)
+Várunk mindenkit nagy nagy szeretettel.
+<br><br>
+<span class="text-[#2174fa] font-bold"> </span>
                         </p>
                     </div>
                     <div>
                         <div class="ml-10 relative flex h-full">
                             <div
-                                class="w-2/3 lg:w-1/3 absolute yellowCard -ml-10 mt-8 p-4 lg:p-8 rounded-xl text-xl xl:text-2xl font-bold">
-                                <h2>Our poultry is fed on an entirely vegetarian diet</h2>
+                                class="w-2/3 lg:w-1/3 absolute yellowCard -ml-10 mt-8 p-4 lg:p-8 rounded-xl text-xl xl:text-2xl text-[#2174fa] font-bold">
+                                <h2>Salánki Farm Haláp, ahol jól érzi magát a család!</h2>
                             </div>
-                            <img class="w-full h-full object-cover rounded-xl" src="{{ asset('/images/three2.jpeg') }}"
+                            <img class="w-full h-full object-cover rounded-xl" src="{{ asset('/images/salanki-farm-halap.jpg') }}"
                                 alt="" />
                         </div>
                     </div>
@@ -261,7 +314,7 @@
             }" class="fourSection container mx-auto text-left py-12 min-h-[820px]">
                 <h1 class="text-2xl lg:text-4xl text-[#2174fa] py-4 caveatFont text-center">Galéria</h1>
                 <h1 class="text-2xl lg:text-4xl boldInter py-4 customGreen text-center">Ismerd meg a farmunkat!</h1>
-                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-2 lg:gap-4 mt-12">
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-2 lg:gap-4 mt-12 px-2 lg:px-0">
                     <template x-for="(image, index) in images" :key="index">
                         <img x-on:click="currentImage = image.src; currentIndex = index; disableScroll()"
                             :class="{ 'lg:col-span-2': image.lgColSpan === 2, 'lg:col-span-1': image.lgColSpan !== 2 }"
@@ -273,12 +326,12 @@
                 <div x-show="currentImage" x-on:click.self="currentImage = ''; enableScroll()"
                     class="fixed top-0 left-0 z-10 w-screen h-screen flex items-center justify-center bg-black/90 bg-opacity-90 bg-blur-md">
                     <div class="relative">
-                        <img class="py-10 px-28 max-h-screen max-w-6/12 object-contain" :src="currentImage" />
+                        <img class="py-10 md:px-28 max-h-screen w-full md:max-w-6/12 object-contain" :src="currentImage" />
                     </div>
                 </div>
 
                 <!-- CLOSE -->
-                <div x-show="currentImage" class="fixed right-10 top-10 flex z-50 w-14 h-14">
+                <div x-show="currentImage" class="fixed right-0 md:right-10 top-10 flex z-50 w-14 h-14">
                     <button x-on:click="currentImage = ''; enableScroll()" class="text-white font-bold">
                         <svg class="w-10 h-10 mr-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                             xmlns="http://www.w3.org/2000/svg">
@@ -289,27 +342,27 @@
                 </div>
 
                 <!-- PREV and NEXT -->
-                <div x-show="currentImage" class="fixed inset-y-0 left-0 flex items-center ml-4 z-50">
+                <div x-show="currentImage" class="fixed inset-y-0 left-0 flex items-center md:ml-4 z-50">
                     <button x-show="currentIndex > 0"
                         x-on:click="currentIndex--; currentImage = images[currentIndex].src"
                         class="text-white font-bold">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"
-                            stroke="currentColor" class="w-10 h-10 ml-5">
+                            stroke="currentColor" class="w-10 h-10 md:ml-5">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
                         </svg>
                     </button>
                 </div>
-                <div x-show="currentImage" class="fixed inset-y-0 right-0 flex items-center mr-4 z-50">
+                <div x-show="currentImage" class="fixed inset-y-0 right-0 flex items-center md:mr-4 z-50">
                     <button x-show="currentIndex < images.length - 1"
                         x-on:click="currentIndex++; currentImage = images[currentIndex].src"
                         class="text-white font-bold">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"
-                            stroke="currentColor" class="w-10 h-10 mr-5">
+                            stroke="currentColor" class="w-10 h-10 md:mr-5">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                         </svg>
                     </button>
                 </div>
-                <div class="w-full flex justify-end pt-4">
+                <div class="w-full flex justify-end pt-4 px-2 lg:px-0">
                     <a href="/kepek"><button class="bg-[#2174fa] px-4 py-2 rounded-xl text-white font-bold">Még több
                             kép</button></a>
                 </div>

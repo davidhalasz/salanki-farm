@@ -48,7 +48,7 @@
                         <template x-if="open">
                             <div class="fixed z-50 overscroll-none h-screen overflow-hidden top-0 left-0 bottom-0 right-0 bg-black/90 backdrop-blur-md flex place-center"
                                 @click="event.target.classList.contains('bg-black/90') ? open = false : ''">
-                                <button class="absolute text-white z-50 top-10 right-10" type="button"
+                                <button class="absolute text-white top-10 right-10" style="z-index: 2005" type="button"
                                     @click="open = false">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                         strokeWidth="1.5" stroke="currentColor" class="w-10 h-10">
@@ -57,33 +57,36 @@
                                 </button>
                                 <div class="relative w-full h-full pt-8 text-white">
                                     <div class="mx-auto w-full h-full flex justify-between">
-                                        <div class="flex items-center w-1/12 h-full">
-                                            <button class="h-full px-4 cursor-pointer"
-                                                @click="currentIndex = currentIndex - 1">
-                                                <svg x-show="currentIndex > 0" xmlns="http://www.w3.org/2000/svg"
-                                                    fill="none" viewBox="0 0 24 24" strokeWidth="1.5"
-                                                    stroke="currentColor" class="w-10 h-10 ml-5">
-                                                    <path strokeLinecap="round" strokeLinejoin="round"
-                                                        d="M15.75 19.5L8.25 12l7.5-7.5" />
-                                                </svg>
-                                            </button>
-                                        </div>
-                                        <div class="w-10/12 max-h-full flex items-center">
+                                        <div class="w-full max-h-full flex items-center">
                                             <img class="pb-2 m-auto px-2 max-h-full" :src="imageUrl"
                                                 alt="current" />
                                         </div>
+                                        <div class="absolute flex justify-between items-center h-full w-full"
+                                            style="z-index: 2000">
+                                            <div class="h-full">
+                                                <button x-bind:disabled="currentIndex < 1" class="h-full px-4 cursor-pointer" style="z-index: 2000"
+                                                    @click="currentIndex = currentIndex - 1">
+                                                    <svg x-show="currentIndex > 0" xmlns="http://www.w3.org/2000/svg"
+                                                        fill="none" viewBox="0 0 24 24" strokeWidth="1.5"
+                                                        stroke="currentColor" class="w-10 h-10">
+                                                        <path strokeLinecap="round" strokeLinejoin="round"
+                                                            d="M15.75 19.5L8.25 12l7.5-7.5" />
+                                                    </svg>
+                                                </button>
+                                            </div>
 
-                                        <div class="flex items-center w-1/12 h-full">
-                                            <button class="h-full px-4 cursor-pointer"
-                                                @click="currentIndex = currentIndex + 1">
-                                                <svg x-show="currentIndex < countImages-1"
-                                                    xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                    viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor"
-                                                    class="w-10 h-10 mr-5">
-                                                    <path strokeLinecap="round" strokeLinejoin="round"
-                                                        d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                                                </svg>
-                                            </button>
+                                            <div class="h-full">
+                                                <button x-bind:disabled="currentIndex > countImages-2"  class="h-full px-4  cursor-pointer" style="z-index: 2000"
+                                                    @click="currentIndex = currentIndex + 1">
+                                                    <svg x-show="currentIndex < countImages-1"
+                                                        xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor"
+                                                        class="w-10 h-10">
+                                                        <path strokeLinecap="round" strokeLinejoin="round"
+                                                            d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                                    </svg>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

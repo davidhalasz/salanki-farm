@@ -40,19 +40,15 @@
         <div class="container mx-auto text-left py-12">
             <h1 class="text-4xl boldInter py-8 customGreen text-center">Szolgáltatások</h1>
             <div class="w-full h-full">
-                <div class="grid grid-cols-1 lg:grid-cols-2">
+                <ol>
                     @foreach ($services as $service)
-                    <div class="card w-full rounded-lg border-l-4 border-green-500 bg-white p-10">
-                        <h2 class="text-xl boldInter customGreen">
-                            {{ $service->name }}
-                        </h2>
-                        <p class="mt-4 text-gray-600">
-                            <p>{{ $service->description }}
-                        </p>
-                    </div>
+                        <li>
+                            <div class="title">{{ $service->name }}</div>
+                            <div class="descr">{{ $service->description }}</div>
+                        </li>
                     @endforeach
-                </div>
 
+                </ol>
             </div>
         </div>
 

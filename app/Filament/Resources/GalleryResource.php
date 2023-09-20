@@ -37,6 +37,7 @@ class GalleryResource extends Resource
                 Card::make([
                       FileUpload::make('filepath')
                         ->multiple()
+                        ->visibility('public')
                         ->directory('galleries')
                         ->storeFileNamesIn('gallery_filename')
                         ->image()

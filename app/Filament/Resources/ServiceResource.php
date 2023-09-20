@@ -12,6 +12,8 @@ use Filament\Resources\Table;
 use Filament\Tables;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Filament\Forms\Components\FileUpload;
+use Filament\Tables\Columns\ImageColumn;
 
 class ServiceResource extends Resource
 {
@@ -27,6 +29,14 @@ class ServiceResource extends Resource
     {
         return $form
             ->schema([
+                FileUpload::make('filepath')
+                    ->panelAspectRatio('2:1')
+                    ->directory('services')
+                    ->storeFileNamesIn('original_filename')
+                    ->image()
+                    ->label('Kép kiválasztása')
+                    ->placeholder('Húzd ide a képet vagy klikkelj ide')
+                    ->required(),
                 Forms\Components\TextInput::make('name')
                     ->required()
                     ->maxLength(255)
@@ -34,6 +44,7 @@ class ServiceResource extends Resource
                 Forms\Components\Textarea::make('description')
                     ->maxLength(65535)
                     ->label('Leírás'),
+
             ]);
     }
 
@@ -43,7 +54,8 @@ class ServiceResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('name')->label('Szolgáltatás neve'),
                 Tables\Columns\TextColumn::make('description')->label('Leírás'),
-            ])
+                ImageColumn::make('filepath')->label('Kép'),
+                ])
             ->filters([
                 //
             ])

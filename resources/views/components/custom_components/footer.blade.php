@@ -1,17 +1,34 @@
-<div class="container mx-auto py-14">
-    <div class="grid grid-cols-1 lg:grid-cols-3">
-        <div>
-            <img class="h-20 w-20 rounded-full " src="{{url('/images/logo2.jpg')}}" alt="Image"/>
+<div class="container mx-auto py-14 text-white">
+    <h2 class="text-center text-3xl mb-2">SALÁNKI FARM HALÁP</h2>
+    <div class="w-full flex justify-center">
+        <img class="h-20 w-20 rounded-full mb-4" src="{{ url('/images/logo2.jpg') }}" alt="Image" />
+    </div>
+
+    <div class="flex flex-row flex-wrap divide-x-4 divide-white gap-4 justify-center lg:text-lg uppercase mt-4">
+        <div class="pl-4">
+            <a class="text-center hover:text-[#2174fa]" href="/">
+                Kezdőlap
+            </a>
         </div>
-        <div>
-            <h1 class="font-bold text-2xl mb-4">Linkek</h1>
-            <ul>
-                <a href="/"><li class="text-lg customGreen">Kezdőlap</li></a>
-                <a href="/galeria"><li class="text-lg customGreen">Galéria</li></a>
-                <a href="/szolgaltatasok"><li class="text-lg customGreen">Szolgáltatások</li></a>
-                <a href="/araink"><li class="text-lg customGreen">Áraink</li></a>
-                <a href="/kapcsolat"><li class="text-lg customGreen">Kapcsolat</li></a>
-            </ul>
+        <div class="pl-4">
+            <a class="text-center hover:text-[#2174fa]" href="/galeria">
+                Galéria
+            </a>
+        </div>
+        <div class="pl-4">
+            <a class="text-center hover:text-[#2174fa]" href="/szolgaltatasok">
+                Szolgáltatások
+            </a>
+        </div>
+        <div class="pl-4">
+            <a class="text-center hover:text-[#2174fa]" href="/araink">
+                Áraink
+            </a>
+        </div>
+        <div class="pl-4">
+            <a class="text-center hover:text-[#2174fa]" href="/kapcsolat">
+                Kapcsolat
+            </a>
         </div>
     </div>
 </div>

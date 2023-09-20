@@ -19,7 +19,9 @@
             <div class="flex-grow">
                 {{ $slot }}
             </div>
-            @include('components.custom_components.footer')
+            <div class="bg-[#313131]">
+                @include('components.custom_components.footer')
+            </div>
         </div>
     </body>
 </html>

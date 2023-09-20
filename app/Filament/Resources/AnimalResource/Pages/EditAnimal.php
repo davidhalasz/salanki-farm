@@ -8,6 +8,7 @@ use Filament\Pages\Actions\Action;
 use Illuminate\Support\Facades\Storage;
 use Filament\Resources\Pages\EditRecord;
 use App\Filament\Resources\AnimalResource;
+use Illuminate\Support\Facades\File;
 
 class EditAnimal extends EditRecord
 {
@@ -20,9 +21,12 @@ class EditAnimal extends EditRecord
         return [
             Action::make('Törlés')
                     ->action(function () use ($animal) {
-                        if(Storage::exists('public/'.$animal->filepath)) {
-                            Storage::delete('public/'.$animal->filepath);
+                        $image_path = public_path() .'/'. $animal->filepath;
+                        
+                        if(File::exists($image_path)) {
+                            unlink($image_path);
                         }
+                        
                         //$foundAnimal = Animal::findById($animal->id);
                         //dd($foundAnimal);
                         $animal->delete();

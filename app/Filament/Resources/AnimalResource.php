@@ -15,6 +15,7 @@ use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\AnimalResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Resources\AnimalResource\RelationManagers;
+use Illuminate\Support\Facades\File;
 
 class AnimalResource extends Resource
 {
@@ -62,7 +63,19 @@ class AnimalResource extends Resource
                 Tables\Actions\EditAction::make()->label('Szerkesztés'),
             ])
             ->bulkActions([
-                Tables\Actions\DeleteBulkAction::make()->label('Törlés')->modalHeading('Farmlakó törlése'),
+                Tables\Actions\DeleteBulkAction::make()->label('Törlés')
+                    ->action(function ($records) {
+                        foreach ($records as $record) {
+                            $image_path = public_path() .'/'. $record->filepath;
+                        
+                            if(File::exists($image_path)) {
+                                unlink($image_path);
+                            }
+                            
+                            $record->delete();
+                        }
+                    })
+                    ->modalHeading('Farmlakó törlése'),
             ]);
     }
 

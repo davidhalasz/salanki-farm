@@ -19,6 +19,7 @@ use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\GalleryResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Resources\GalleryResource\RelationManagers;
+use Illuminate\Support\Facades\File;
 
 class GalleryResource extends Resource
 {
@@ -86,9 +87,12 @@ class GalleryResource extends Resource
                 BulkAction::make('Törlés')
                     ->action(function ($records) {
                         foreach ($records as $record) {
-                            if(Storage::exists('public/'.$record->filepath)) {
-                                Storage::delete('public/'.$record->filepath);
+                            $image_path = public_path() .'/'. $record->filepath;
+                        
+                            if(File::exists($image_path)) {
+                                unlink($image_path);
                             }
+                            
                             $record->delete();
                         }
                     })
